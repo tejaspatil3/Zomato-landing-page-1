@@ -1,2 +1,2 @@
-# This is may Zomato Landing page clone 
+# This is my Zomato Landing page clone 
 # Modified and Added some content
