@@ -8,9 +8,9 @@
     /* background: url(/Images/heroSectionBackground.png); */
     
     background-size: cover;
-    min-height: 60vh;
-    min-width: 50vw;
     background-position: center;
+    min-height: 60vh;
+    /* min-width: 50vw; */
     color: white;
 
 }
@@ -21,7 +21,6 @@
     justify-content: space-between;
     height: 65px;
     padding: 15px 50px;
-    
 
 }
 /* Anchor in nav bar */
@@ -44,7 +43,7 @@
 .navspace .usericon{
     height: 30px;
     width: 30px;
-    border-radius: 60px;
+    border-radius: 90px;
     /* T0 make a circle around from the box  */
     
     align-items: center;
@@ -56,6 +55,61 @@
     /* TO hide the icon or other */
 }
 
+/* The centre input console */
+.heroContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    /* height: 300px; */
+    height: calc(60vh - 65px);
+    /* calc() -- will calc function for different units */
+}
+
+.heroSectionLogo{
+        width: 200px;
+        height: 40px;
+        /* height: auto; */
+}
+.heroHeading{
+    /* display: flex; */
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    /* TO make it more or less bold Large number more thick letters (no units) */
+}
+
+.heroInputContainer{
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 50%;
+    border-radius: 10px;
+}
+
+.heroInputLocation,
+.heroInputSearch{
+    padding: 5px;
+    border:none;
+    outline: none;
+   
+
+}
+
+.heroInputLocation{
+    width: 35%;
+    border-right: 2px rgb(190, 183, 183) solid;
+}
+/* Both Location and Search will share the 100 % space */
+.heroInputSearch{
+    width: 65%;
+}
+
+/* Always write media quries at end */
 @media only screen and (max-width:600px){
     .navspace .usericon{
         display: flex;
@@ -65,9 +119,76 @@
         /* To hide the more opion on right in small screen size */
         display: none;
     }
-    .heroSection{
+    /* .heroSection{
         min-height: 80vh;
-        /*height: 80vh; In small Screen size it wiil be 80 from 60 //min-height: 60vh; */
+    } */
+    /*height: 80vh; In small Screen size it wiil be 80 from 60 //min-height: 60vh; */
+    
+    .heroContainer{
+        flex-direction: column;
+        background-color: transparent;
+        width: 100%;
     }
 
-} 
+    .heroInputLocation,
+    .heroInputSearch{
+        padding: 18px;
+        border-radius: 10px;
+        width: 98%;
+    }
+    /* .heroContainer{
+        height: calc(80vh - 40px);
+    } */
+     /* This will zoom image to 80vh on shronking the screen */
+
+    .heroHeading{
+        font-size: 18px;
+        width: 95%;
+    }
+
+}
+/* out of media */
+.container{
+    margin: 3rem;
+    width: 20%;
+}
+.mainpageCards{
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    
+    /* For  small screen size it wil go one below other */
+    gap: 0.5rem;
+    /* align-items: center;
+    justify-content: center; */
+    /* width: 40%; */
+
+}
+.pageCards{
+    border-radius: 10px;
+    overflow: hidden;
+    /* Image will not overflow from card */
+    border: 1px solid #d2cdcd;
+    transition: all 3s ease-out;
+    margin-right: 10px;    
+}
+.pageCards:hover{
+    transform: scale(1.2);
+}
+.pageCards img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+.cardContent{
+    padding: 10px;
+}
+
+.cardContent h4{
+    font-size: 20px;
+    font-weight: 400px;
+}
+.cardContent p{
+    font-size: 13px;
+}
